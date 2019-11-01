@@ -1,0 +1,10 @@
+{
+  "read_timeout": "5",
+  "write_timeout": "10",
+  "database_type": "mysql",
+  "mysql_user": "####",
+  "mysql_password": "####",
+  "mysql_host": "####",
+  "mysql_name": "####",
+  "redis_host": ""
+}

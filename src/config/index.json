@@ -1,0 +1,6 @@
+{
+  "app_env": "local",
+  "encrypt": "AES",
+  "http_port": "80",
+  "maintain": "false"
+}
