@@ -34,5 +34,7 @@ goxorm => 你的$GOPATH/pkg內的github.com/go-xorm/cmd/xorm/templates/goxorm
         - services 服務
         - template 樣板
         - tests 單元測試
+	- presenter 顯示邏輯
+	- notification 通知
         - go.mod 外部依賴管理文件
         - main.go 主執行程序
