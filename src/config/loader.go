@@ -10,7 +10,7 @@ import (
 /**
 * config 初始化
  */
-func LoadConfigInstance() {
+func init() {
 	env := make(map[string]string)
 	config, err := ioutil.ReadFile("config/index.json")
 	if err != nil {

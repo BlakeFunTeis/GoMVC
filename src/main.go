@@ -1,6 +1,8 @@
 package main
 
 import (
+	"GoMVC/core"
+	"GoMVC/routes"
 	"context"
 	"github.com/gin-gonic/gin"
 	"log"
@@ -10,21 +12,14 @@ import (
 	"strings"
 	"syscall"
 	"time"
-	"GoMVC/config"
-	"GoMVC/core"
-	"GoMVC/routes"
 )
 
 
 func main() {
-	config.LoadConfigInstance()
 	ginInstance := gin.New()
 	ginInstance.Use(gin.Logger())
 	ginInstance.Use(gin.Recovery())
 	gin.SetMode(getMode())
-	core.GetInstance()
-	core.ElasticConnect()
-	core.RedisConnect()
 	defer func() {
 		if r := recover(); r != nil {
 			log.Println(r)

@@ -34,6 +34,17 @@ func GetInstance() {
     DB.DB().SetMaxOpenConns(maxOpen)
 }
 
+func ChangeDatabase(database string)  {
+    CloseDatabase()
+    err := os.Setenv("mysql_name", database)
+    if err == nil {
+        GetInstance()
+        return
+    }
+
+    log.Println("切換資料庫失敗")
+}
+
 func CloseDatabase() {
     _ = DB.Close()
 }

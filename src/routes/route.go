@@ -1,10 +1,10 @@
 package routes
 
 import (
-    "github.com/gin-gonic/gin"
-    "os"
     "GoMVC/config"
     "GoMVC/core"
+    "github.com/gin-gonic/gin"
+    "os"
 )
 
 func RouterInstance(routes *gin.Engine) *gin.Engine {
